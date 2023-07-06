@@ -1,10 +1,14 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
   color: #333;
 }
 
 main {
   padding: 1vh;
-  max-width: 90vh;
+  max-width: 90%;
   margin: 0 auto;
   padding: 1vh;
 }
@@ -40,6 +44,8 @@ header nav{
   display: grid;
   grid-template-columns: .9fr 1.1fr;
   gap: 2vh;
+  padding-left: 4vh;
+  padding-right: 4vh;
   margin-bottom: 3vh;
 }
 
@@ -65,4 +71,37 @@ header nav{
 .post .summary{
   margin: 1vh 0;
   line-height: 3vh;
+}
+
+.Register{
+  max-width: 50vh;
+  margin: 0 auto;
+}
+.Login{
+  max-width: 50vh;
+  margin: 0 auto;
+}
+input{
+  display: block;
+  margin-bottom: 0.7vh;
+  width: 100%;
+  padding: 0.7vh 0.9vh;
+  border: 0.3vh solid #ddd;
+  border-radius: 0.7vh;
+  background-color: #fff;
+}
+
+button{
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border: 0;
+  color: #fff;
+  border-radius: 0.7vh;
+  padding: .9vh 0;
+}
+
+
+form h1{
+  text-align: center;
 }
