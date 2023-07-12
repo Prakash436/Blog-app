@@ -34,7 +34,10 @@ app.post('/login', async (req,res) => {
     if(passOK) {
         jwt.sign({username, id:userDoc._id}, secret, {}, (err,token) => {
             if(err) throw err;
-            res.cookie('token',token).json('ok');
+            res.cookie('token',token).json({
+                id:userDoc._id,
+                username,
+            });
         });
     } else{
         res.status(400).json('wrong credentrials')
@@ -48,10 +51,14 @@ app.get('/profile', (req,res) => {
         res.json(info);
     });
     res.json(req.cookies);
-})
+});
 
 app.post('/logout', (req,res) => {
     res.cookie('token','').json('ok');
+});
+
+app.post('/post',(req,res) => {
+    
 })
 
 app.listen(4000)

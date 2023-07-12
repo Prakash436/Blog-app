@@ -102,6 +102,6 @@ button{
 }
 
 
-form h1{
+.Login h1, .Register h1{
   text-align: center;
 }
