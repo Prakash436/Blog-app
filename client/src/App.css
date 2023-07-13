@@ -66,6 +66,7 @@ header nav{
 
 .author {
   color: #333;
+  text-decoration: none;
 }
 
 .post .summary{
