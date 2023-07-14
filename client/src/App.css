@@ -40,9 +40,15 @@ header nav{
   gap: 2vh;
 }
 
+@media screen and (min-width: 725px) {
+  div .post {
+    grid-template-columns:.9fr 1.1fr;
+  }
+}
+
 .post{
   display: grid;
-  grid-template-columns: .9fr 1.1fr;
+  grid-template-columns:1fr;
   gap: 2vh;
   padding-left: 4vh;
   padding-right: 4vh;
@@ -53,6 +59,11 @@ header nav{
   margin:0;
   font-size: 3vh;
   margin-bottom: 0.7vh;
+}
+
+.texts a{
+  text-decoration: none;
+  color: inherit;
 }
 
 .post .info{
@@ -105,4 +116,37 @@ button{
 
 .Login h1, .Register h1{
   text-align: center;
+}
+
+div .post-page div.image {
+  max-height: 40vh;
+  display: flex;
+  overflow: hidden;
+}
+
+div .post-page .image img{
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+div .post-page a{
+  color: #333;
+  text-decoration: underline;
+}
+
+
+div .post-page time{
+  display: block;
+  font-size: 1.8vh;
+  color: #8a8989;
+}
+
+div .post-page .author {
+  font-size: 1.5vh;
+  font-weight: bold;
+}
+
+div .post-page .content {
+  line-height: 3vh;
 }
