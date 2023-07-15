@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+a{
+  cursor: pointer;
+}
+
 body {
   color: #333;
 }
@@ -104,6 +108,7 @@ input{
 }
 
 button{
+  cursor: pointer;
   width: 100%;
   display: block;
   background-color: #555;
@@ -119,7 +124,7 @@ button{
 }
 
 div .post-page div.image {
-  max-height: 40vh;
+  max-height: 65vh;
   display: flex;
   overflow: hidden;
 }
@@ -149,4 +154,24 @@ div .post-page .author {
 
 div .post-page .content {
   line-height: 3vh;
+}
+
+div .edit-row {
+    text-align:right;
+    margin-bottom: 2vh;
+}
+
+div.post-page .edit-btn{
+  background-color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap:0.7vh;
+  color: #fff;
+  padding:1.2vh 2.1vh;
+  border-radius: 0.7vh;
+  text-decoration: none;
+}
+
+a svg {
+  height: 2.4vh;
 }
