@@ -9,20 +9,15 @@ const modules = {
       ['clean']
     ]
 };
-const formats = [
-    'header',
-    'bold', 'italic', 'underline', 'strike', 'blockquote',
-    'list', 'bullet', 'indent',
-    'link', 'image'
-];
 
 export default function Editor({value,onChange}) {
     return (
-        <ReactQuill
-        value={value}
-        theme="snow"
-        onchange={onChange}
-        modules={modules}
-        formats={formats} />
+        <div className="content">
+            <ReactQuill
+            value={value}
+            theme="snow"
+            onChange={onChange}
+            modules={modules} />
+        </div>
     );
 }

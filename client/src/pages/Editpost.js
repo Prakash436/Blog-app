@@ -19,7 +19,7 @@ export default function EditPost() {
                 setSummary(postInfo.summary);
             })
         })
-    })
+    },[]);
 
     async function updatePost(ev) {
         const data = new FormData();
@@ -56,7 +56,7 @@ export default function EditPost() {
             onChange={ev => setSummary(ev.target.value)} />
             <input type="file"
             onChange={ev => setFiles(ev.target.files)}/>
-            <Editor onChange={setContent} value={content} />
+            <Editor value={content} onChange={setContent}/>
             <button style={{marginTop:'1vh'}}>Update post</button>
         </form>
     )

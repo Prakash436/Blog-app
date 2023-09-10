@@ -105,9 +105,9 @@ app.put('/post', uploadMiddleware.single('file'),async(req,res) => {
         if(!isAuthor){
             return res.status(400).json('you are not the author');
         }
-        else{
-            fs.unlinkSync(tempPath);
-        }
+        // else{
+        //     fs.unlinkSync(tempPath);
+        // }
         // if (isAuthor) {
         //     tempPath = tempPath.replace('/','');
         //     // fs.unlinkSync(tempPath);
@@ -119,6 +119,7 @@ app.put('/post', uploadMiddleware.single('file'),async(req,res) => {
             content,
             cover:newPath ? newPath : postDoc.cover,
         });
+        res.json(postDoc);
     });
 
 })
