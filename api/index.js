@@ -28,7 +28,8 @@ app.post('/register', async (req,res) => {
     try {
         const userDoc = await User.create({username, password:bcrypt.hashSync(password,salt),
         });
-        res.cookie('token', token).json('ok');
+        res.json(userDoc);
+        // res.cookie('token', token).json('ok');
     } catch(e) {
         res.status(400).json(e);
     }
